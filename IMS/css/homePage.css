@@ -1,0 +1,435 @@
+/*MARK: CSS Reset
+/* css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+/* MARK: ROOT 
+/* root vars*/
+:root {
+    --mainOrange: #F96D00;
+    --accentOrange: #FFAF45;
+    --mainBlack: #222831;
+    --accentBlack: #373A40;
+    --darkGrey: #393E46;
+    --lightGrey: #686D76;
+    --lighterGrey: #DBDBDB;
+    --white: #F4F4F4;
+}
+
+
+
+
+
+
+
+
+
+
+/* MARK: CSS Start
+/* start of css styling */
+
+body{
+    font-family: arial;
+    background: url('../images/blackBG.jpg')no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+/* MARK: Nav Bar
+/*nav bar styling*/
+div.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoIMS {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    box-sizing: 0px;
+    height: 25px;
+    width: 70px;
+    border-radius: 5px;
+    text-shadow: 0 0 0.20em #000000;
+}
+
+.rightPush {
+    margin-right: auto;
+}
+
+.leftPush {
+    margin-left: auto;
+}
+
+div.header a {
+    font-size: 20px;
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px;
+}
+
+div.header a:hover{
+    background: var(--mainOrange);
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MARK:Banner
+/* banner styling */
+
+
+
+div.bannerHeader h1{
+    font-size: 100px;
+    text-shadow: 0 0 0.15em #000000;
+    color: var(--mainOrange);
+    line-height: 100%;
+}
+
+div.bannerHeader p{
+    font-size: 40px;
+    text-shadow: 0 0 0.15em #000000;
+    border-radius: 5px;
+    color: var(--mainOrange);
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
+p.bannerTagLine {
+    margin-top: 10px;
+    font-size: 30px;
+    color: var(--white);
+    text-shadow: 0 0 0.15em #000000;
+}
+
+
+
+
+
+
+
+
+
+/* MARK: Icons 
+/* Icons */
+div.bannerIcons {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+div.bannerIcons a{
+    font-size: 45px;
+    margin-left: 40px;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--lightGrey);
+    border-radius: 55%;
+    width: 50px;
+    height: 50px;
+}
+
+div.bannerIcons a:first-child{
+    margin-left: 0px;
+}
+
+div.bannerIcons a:hover {
+    color: var(--white);
+    background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+
+    font-size: 45px;
+    transition: .5s all;
+}
+
+
+
+
+
+
+
+
+/* MARK: Glass container 
+/*glass outline after the navbar */
+
+div.mainGlassContainer {
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 5px;
+}
+
+
+
+
+
+/* main home page container */
+div.homePageContainer {
+    padding-top: 70px;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px;
+}
+
+
+
+/* MARK: 3 col 
+/* 3 cards under banner */
+
+h2 {
+    text-align: center;
+    color: var(--mainOrange);
+    font-size: 30px;
+   margin-bottom: 50px;
+    text-shadow: 0 0 0.15em #000000;
+}
+
+div.homePageFeatures {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+div.homePageFeature {
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    flex: 1 1 200px; 
+    margin: 10px;
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+
+div.homePageFeature:hover {
+    background: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+
+div.homePageFeature span.featureIcon {
+    height: 80px;
+    width: 80px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    font-size: 40px;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    color: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 20px auto; 
+}
+
+div.homePageFeature h3.featureTitle {
+    margin-top: 10px;
+    color: var(--accentOrange);
+}
+
+div.homePageFeature p.featureDescription {
+    margin-top: 20px;
+    color: var(--lighterGrey);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MARK: Articles
+/* sets up the section that we use to expand on the cards below the banner. */
+
+.articleSectionContainer {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-inline: auto;
+    margin-top: 50px;
+    gap: 3rem;
+    margin-bottom: 50px; /* sets the footer away rom the glass container */
+}
+
+/* container for the article as a whole */
+.articleContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-height: 300px;
+    padding: 40px;
+    max-width: 100%; 
+    max-height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* container for the h3 tag so it can be seperate from the info */
+.articleHeader {
+    flex-shrink: 1;
+    text-align: center;
+    color: var(--mainOrange);
+    font-size: 30px;
+}
+
+/* keeps the ul and pic under the header and formats the content */
+.articleInfoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+/* styles the li content */
+.listItem {
+    color: var(--white);
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* styles the fontawesome checkmark */ 
+li.listItem i {
+    color: var(--accentOrange);
+    margin-right: 4px;
+}
+
+/* styles my picture for the first article */
+.worker img{
+    max-width: 100%;
+    max-height: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MARK: Footer
+/* footer content */
+
+div.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 20px;
+    padding: 4px;
+    margin-top: 50px; /* sets the footer away rom the glass container */
+}
+
+div.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+}
+
+div.footerTags {
+    padding: 20px;
+}
+
+div.footerTag {
+    display: inline-block;
+    padding: 7px;
+}
+
+div.footerTag p {
+    font-size: 15px;
+    color: var(--white);
+}
+
+.footerTag i {
+    color: var(--white);
+}
+
+.footerTag i:hover {
+    color: var(--mainOrange);
+    cursor: pointer;
+}
+

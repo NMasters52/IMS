@@ -1,0 +1,759 @@
+/* MARK: CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* MARK: ROOT 
+/* root colors */
+:root {
+    --mainOrange: #F96D00;
+    --accentOrange: #FFAF45;
+    --mainBlack: #222831;
+    --accentBlack: #373A40;
+    --darkGrey: #393E46;
+    --lightGrey: #686D76;
+    --lighterGrey: #DBDBDB;
+    --white: #F4F4F4;
+}
+
+
+/* Dashboard Styling */
+
+body{
+    font-family: arial;
+}
+
+/* container for making the dashbaord flex */
+
+#dashboard_main_container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* MARK: Side Nav 
+/* sidebar navagation styling */
+div.dashboard_sidebar {
+    width: 15%;
+    min-height: 800px;
+    background: var(--mainBlack);
+}
+
+h3.sidebar_logo {
+    color: var(--mainOrange);
+    font-size: 80px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+div.sidebar_user {
+    text-align: center;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--white);
+}
+
+ul.sidebar_menus_list {
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+ul.sidebar_menus_list li{
+   padding: 15px 15px;
+   text-transform: uppercase;
+   display: flex; 
+}
+
+ul.sidebar_menus_list li:hover{
+    background-color: var(--mainOrange);
+    color: var(--white);
+}
+
+.sidebar_menus_list li a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    align-items: center; 
+    width: 100%;
+}
+
+.sidebar_menus_list li a i {
+    margin-right: 5px;
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+ul.sidebar_menus_list li.active {
+    background-color: var(--mainOrange);
+    color: whitesmoke;
+}
+
+
+
+/* container for everything besides the side nav bar. put this here cause of the javascript styling for the nav button event click */
+div.dashboard_content_container {
+    width: 85%;
+    background-color: var(--textColor);
+}
+
+
+/* MARK: Top nav
+/* top nav bar styling */
+div.dashboard_topNav {
+    background: var(--lightGrey);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Center items vertically */
+}
+
+div.dashboard_topNav a {
+    font-size: 18px;
+    color: var(--lighterGrey);
+    text-decoration: none;
+}
+
+.name {
+    color: var(--lighterGrey);
+}
+
+#logOutBtn {
+    float: right; /* Keep logout button aligned to the right */
+}
+
+div.dashboard_content {
+    padding: 40px 10px 10px 10px;
+    
+}
+
+/* this is the container that has all the tables,forms,and is centered in the page. */
+div.dashboard_content_main {
+    background-color: var(--lighterGrey);
+    min-height: 800px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+/* MARK: Employee Dashbaord
+/* Employee Dashbaord Styling */
+
+.pageContainerEmployeeDB {
+    background-color: var(--accentOrange);
+    height: 80%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; 
+    padding: 20px;
+    border-radius: 10px / 30px;
+}
+
+.employeeDBContainerColor {
+    background-color: var(--lightGrey);
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    border-radius: 10px / 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.employeeDashboardHeader {
+    text-align: center;
+    font-size: 40px;
+    color: var(--lighterGrey);
+    padding: 30px;
+}
+
+.employeeDBContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 70%;
+    gap: 25px;
+}
+
+.employeeInfoContainer {
+    border-radius: 10px / 30px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    max-height: 320px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--accentBlack);
+    justify-content: center;
+    padding: 10px;
+  }
+
+.ulInfoContainer{
+    display: flex;
+    
+    height: 90%;
+    width: 90%;
+    background: var(--lighterGrey);
+    align-items: center;
+    border-radius: 5px;
+}
+
+.employeeInfoHeader {
+    text-align: center;
+    color: var(--mainBlack);
+    font-size: 20px;
+}
+
+.employeeInfoContainer li {
+    padding: 15px;
+    color: var(--accentBlack);
+    display: flex;
+}
+
+.employeePicContiner {
+    margin-left: auto;
+    background: var(--accentBlack);
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.employeePic{
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* MARK: Carousel
+/* Carousel styling */
+
+.carousel {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.carouselPicContainer {
+    height: 75%;
+    width: 75%;
+    position: relative;
+}
+
+.slide {
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide img{
+    display: block;
+    max-width: 1000px;
+    max-height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);;
+}
+
+
+.carousel-button:hover {
+    color: var(--accentOrange);
+    cursor: pointer;
+}
+
+.carouselInfoHeader {
+    text-align: center;
+    color: var(--lighterGrey);
+    margin-top: 60px;
+    font-size: 40px;
+}
+    
+
+
+
+
+
+
+
+
+
+/* MARK: Session alert
+/* sign in alert styling */
+div.alert-success{
+    padding: 10px;
+    border: 1px solid transparent;
+    font-family: Arial, sans-serif;
+    color: var(--white); 
+    background-color: var(--accentOrange);  
+}
+
+/*MARK: Add User
+/* Add User Form Styling */
+.mainFormContainer {
+    background-color: var(--accentOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-sizing: border-box; 
+    padding: 20px;
+    border-radius: 10px / 30px;
+}
+
+
+.addUserForm {
+    background-color: var(--lightGrey);
+    padding: 30px;
+    width: 100%; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+.addUserFormHeader {
+    text-align: center;
+    color: var(--lighterGrey);
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+
+.divFormContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0; 
+    margin: 0; 
+    padding: 10px;
+}
+
+
+.divFormContainer label {
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    color: var(--lighterGrey);
+}
+
+
+
+.divFormContainer input {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.addUserButton {
+    margin-top: 5px;
+    color: var(--accentBlack);
+    background-color: var(--lighterGrey);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.addUserButton:hover {
+    background-color: var(--accentOrange);
+    cursor: pointer;
+}
+
+/* MARK: USER TABLE 
+/* styling for users managment page. includes the table displaying the users info, and the edit form styling */
+
+/* table styling */
+
+.usersTableContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+h2.tableHeader {
+    font-size: 40px;
+    color: var(--accentBlack);
+    text-align: center;
+    padding: 20px;
+}
+
+th {
+    background: var(--accentOrange);
+}
+
+tbody {
+    background-color: var(--white);
+}
+
+table.usersTable, th, td {
+    border: 2px solid var(--darkGrey);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: center;
+    color: var(--darkGrey);
+}
+
+.userButton {
+    color: var(--mainOrange);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/* MARK: User Edit 
+/* edit user form styling */
+
+div.editUserContainer {
+    background-color: var(--accentOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    max-width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-sizing: border-box; 
+    padding: 20px;
+    border-radius: 10px / 30px;
+}
+
+.editUserForm {
+    background-color: var(--lightGrey);
+    width: 100%; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.editLabelContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0; 
+    margin: 0; 
+    padding: 10px;
+}
+
+
+.editLabelContainer input {
+    padding: 8px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.editUserH2 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--lighterGrey);
+}
+
+.editButton {
+    margin-top: 5px;
+    background-color: var(--lighterGrey);
+    color: var(--accentBlack);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editButton:hover {
+    background-color: var(--accentOrange);
+    cursor: pointer;
+}
+
+.editLabel {
+    color: var(--lighterGrey);
+}
+
+
+
+/* MARK: Receive Material 
+/*  3 receive material stylings. 3 areas being form, moveBin edit button form, and table */
+
+/* form styling */
+.receiveMainContainer {
+    background-color: var(--accentOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    max-width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-sizing: border-box; 
+    padding: 20px;
+    border-radius: 10px / 30px;
+}
+
+.formContainer {
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--lightGrey);
+}
+
+.palletHeader {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--lighterGrey);
+}
+
+.receiveForm {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--lighterGrey);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.form-group input[type="date"] {
+    padding: 6px; /* Adjust padding for date input */
+}
+
+.receiveGoodsButton:hover {
+    background-color: var(--accentOrange);
+    cursor: pointer;
+    border: 1px solid var(--lightGrey);
+    border-radius: 5px;
+}
+
+/* MARK: Receive Pallet Table
+/* table  */
+table.receiversTable, th, td {
+    border: 2px solid var(--darkGrey);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    color: var(--darkGrey);
+    
+}
+
+
+.recieveLastTenContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+}
+
+table.receiversTable, tr:hover {
+    background: rgba(83, 81, 81, 0.5);
+}
+
+td, th {
+    width: 6rem;
+}
+
+.receiveTableHeader {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--accentBlack);
+}
+
+.materialManagmentButton:hover {
+    background-color: var(--accentOrange);
+    cursor: pointer;
+    border: 1px solid var(--lightGrey);
+    border-radius: 5px;
+}
+
+
+/* Mark: Material Managment Table 
+/* Material Management Table Styling */
+
+.materialManagementMainContainer {
+    display: flex;
+}
+
+.materialManagementFormContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.materialManagmentHeader {
+    padding: 20px;
+    font-size: 30px;
+    color: var(--accentBlack);
+    text-align: center;
+}
+
+/* MARK: Edit Bin Form
+/* edit bin form styling */
+
+
+.moveBinContainer {
+    background-color: var(--accentOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-sizing: border-box; 
+    padding: 20px;
+    border-radius: 10px / 30px;
+
+}
+
+.moveBinForm {
+    background-color: var(--lightGrey);
+    padding: 30px;
+    width: 100%; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+/* button styling */
+.moveBinProcess {
+    margin-top: 5px;
+    color: var(--accentBlack);   
+    border: none;
+    border-radius: 5px;
+}
+
+.moveBinProcess:hover {
+    background-color: var(--accentOrange);
+    cursor: pointer;
+}
+
+
+.materialManagmentHeader {
+    text-align: center;
+    font-size: 20px;
+    color: var(--lighterGrey);
+    margin-bottom: 5px;
+}
+
+.editBinLocationTable {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* MARK: Chart Styles
+/* Chart Styling */
+
+.chartContainer {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.selectContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.chartHeader {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: var(--accentBlack);
+}

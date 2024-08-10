@@ -1,0 +1,126 @@
+/* MARK: ROOT 
+/* root colors */
+:root {
+    --mainOrange: #F96D00;
+    --accentOrange: #FFAF45;
+    --mainBlack: #222831;
+    --accentBlack: #373A40;
+    --darkGrey: #393E46;
+    --lightGrey: #686D76;
+    --textColor: #DBDBDB;
+    --white: #F4F4F4;
+}
+
+/* background image */
+html {
+    background: url('../images/blackBG.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Home Button */
+.home {
+    color: var(--mainOrange);
+}
+
+
+/* login styling */
+div.logInHeader {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 50px ;
+}
+
+ 
+div.logInHeader h1 {
+    font-size: 60px;
+    color: var(--mainOrange);
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 0 0 0.15em #000000;
+}
+
+div.logInHeader h3 {
+    color: var(--mainOrange);
+    font-size: 30px;
+    border-bottom: 5px solid var(--mainOrange);
+    margin: 0px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.15em #000000;
+}
+
+div.logInBody form{
+    margin:0 auto;
+    width: 500px;
+     background: rgba(0,0,0,.5);
+     padding: 60px;
+     border: 2px solid var(--white);
+     border-radius: 8px;
+}
+
+div.logInInput{
+    margin-top: 20px;
+}
+
+
+div.logInInput label{
+ display: block;
+ text-transform: uppercase;
+ font-size: 20px;
+ color: var(--white);
+ font-weight: bold;
+}
+
+div.logInInput input {
+    height: 30px;
+    width: 100%;
+    border: 2px solid var(--mainOrange);
+    padding: 2px;
+    text-align: center;
+    font-style: italic;
+}
+
+div.logInButtonContainer{
+margin-top:20px;
+text-align: center;
+}
+
+div.logInButtonContainer button {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: var(--mainOrange);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+div.logInButtonContainer button:hover {
+    background: rgba(0,0,0,.5);
+}
+
+
+/* MARK:Alert
+/* styling for alert message */
+/* General alert styling */
+.alert {
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+
+#alert-danger {
+    color: #a94442; 
+    background-color: #f2dede;
+    border-color: var(--textColor);
+}
+
+#alert-danger strong {
+    font-weight: bold;
+}
