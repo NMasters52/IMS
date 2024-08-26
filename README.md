@@ -53,6 +53,7 @@ bash
 Future Updates
 
     Transition to React framework for improved performance and maintainability.
+    I have since become much more familiar with responsive website design. This original versions css will be refractored to much dryer and responsive code with BEM method.
     Enhanced user interface and experience.
     Additional features based on user feedback.
 
