@@ -8,7 +8,7 @@ Live Version
 
 The Inventory Management System is live and hosted using Cyberduck and Opalstack. You can access it via the following link:
 
-Inventory Management System
+https://portfolio.nmasters52.opalstacked.com/IMS/index.html
 
 To see the features and interact with the system, please reach out to me for login credentials at: nmasters52@gmail.com.
 Current Status
